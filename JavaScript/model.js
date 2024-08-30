@@ -8,6 +8,7 @@ function otraFuncion(){
     print('hola')
     print('Casi que no')
     print('Holaa')
+    print('Arias')
 }
 
 function unoDOS(){
