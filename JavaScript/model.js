@@ -11,6 +11,7 @@ function unoDOS(){
 print("nooooooooooo")
 print('Hola Como estan')
 print('Arias Gaste Tinto')
+print('mañana tomamos tinto')
 }
 
 
