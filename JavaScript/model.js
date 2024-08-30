@@ -10,6 +10,7 @@ function otraFuncion(){
 function unoDOS(){
 print("nooooooooooo")
 print('Hola Como estan')
+print('Arias Gaste Tinto')
 }
 
 
