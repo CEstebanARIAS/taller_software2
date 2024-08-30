@@ -15,5 +15,6 @@ print('mañana tomamos tinto')
 
 function arias(){
     print('ariassss Gaste Tinto')
+    print("djskjdskfjsdfjlsd")
 }
 }
