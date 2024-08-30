@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro y Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro</h1>
+        <form id="registerForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+            
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" required>
+            
+            <button type="submit">Registrar</button>
+        </form>
+        
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="loginCedula">Cédula:</label>
+            <input type="text" id="loginCedula" name="loginCedula" required>
+            
+            <label for="loginCelular">Celular:</label>
+            <input type="text" id="loginCelular" name="loginCelular" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
