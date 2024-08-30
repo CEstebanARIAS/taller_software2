@@ -6,3 +6,7 @@ function otraFuncion(){
     print('mensaje');
 }
 
+function unoDOS(){
+
+}
+hola
