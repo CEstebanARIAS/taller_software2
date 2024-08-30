@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD
 function luisito(){
 print('luissssss')
 }
@@ -20,7 +20,7 @@ function arias(){
     print('Hola')
 }
 }
-=======
+
 document.getElementById('taxForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -49,4 +49,3 @@ document.getElementById('taxForm').addEventListener('submit', function(event) {
         resultDiv.textContent = 'No debes declarar renta.';
     }
 });
->>>>>>> fe1406d2411087edaf7433d26fa16f2d8e8610ae
