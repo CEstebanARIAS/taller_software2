@@ -13,5 +13,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     localStorage.setItem('celular', celular);
     
     alert('Registro exitoso');
-    window.location.href = 'Index/index.html';
+    
+    // Script_login.js
+window.location.href = 'index.html'; // Ruta correcta para redirigir al index principal
 });
