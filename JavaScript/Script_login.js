@@ -5,17 +5,22 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const apellidos = document.getElementById('apellidos').value;
     const cedula = document.getElementById('cedula').value;
     const celular = document.getElementById('celular').value;
-    const contraseña =document.getElementById('contraseña').value;
-    const contraseñaConf =document.getElementById('confContraseña').value;
+    const contraseña = document.getElementById('password').value; 
+    const contraseñaConf = document.getElementById('confPassword').value;
+
+        // Validar si las contraseñas coinciden
+        if (contraseña !== contraseñaConf) {
+            alert('Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.');
+            return; // Detener la ejecución del script
+        }
     
     // Guardar los datos en localStorage
     localStorage.setItem('nombre', nombre);
     localStorage.setItem('apellidos', apellidos);
     localStorage.setItem('cedula', cedula);
     localStorage.setItem('celular', celular);
-    localStorage.setItem('contarseña', contraseña);
-    localStorage.setItem('confirmar contraseña', confContraseña);
-    
+    localStorage.setItem('contraseña', contraseña); 
+    localStorage.setItem('confirmarContraseña', contraseñaConf);
     alert('Registro exitoso');
     
     // Script_login.js
