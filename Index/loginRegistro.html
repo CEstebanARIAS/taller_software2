@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+    <link rel="stylesheet" href="../Styles/Style_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro</h1>
+        <form id="registerForm" action="registrar.php" method="post">
+
+            <label for="celular"><i class="fas fa-mobile-alt"></i> Celular:</label>
+            <input type="text" id="celular" name="celular" required>
+
+            <label for="password">Contraseña:</label>
+             <input type="password" id="password" name="password">
+            
+            <button type="submit" class="btn-register">Ingresar <i class="fas fa-check"></i></button>
+        </form>
+    </div>
+    <script src="../JavaScript/Script_login.js"></script>
+</body>
+</html>
