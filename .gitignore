@@ -1,1 +1,14 @@
+# Ignorar el archivo .env
+.env
+
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+
 desktop.ini
