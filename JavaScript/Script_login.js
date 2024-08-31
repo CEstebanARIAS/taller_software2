@@ -5,12 +5,16 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const apellidos = document.getElementById('apellidos').value;
     const cedula = document.getElementById('cedula').value;
     const celular = document.getElementById('celular').value;
+    const contraseña =document.getElementById('contraseña').value;
+    const contraseñaConf =document.getElementById('confContraseña').value;
     
     // Guardar los datos en localStorage
     localStorage.setItem('nombre', nombre);
     localStorage.setItem('apellidos', apellidos);
     localStorage.setItem('cedula', cedula);
     localStorage.setItem('celular', celular);
+    localStorage.setItem('contarseña', contraseña);
+    localStorage.setItem('confirmar contraseña', confContraseña);
     
     alert('Registro exitoso');
     
