@@ -13,8 +13,8 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     // Guardar los datos en localStorage
     localStorage.setItem('cedula', cedula);
     localStorage.setItem('contraseña', contraseña); 
-    alert('Registro exitoso');
+    alert('Bienvenido');
     
     // Script_login.js
-window.location.href = 'login.html'; // Ruta correcta para redirigir al index principal
+window.location.href = 'index.html'; // Ruta correcta para redirigir al index principal
 });

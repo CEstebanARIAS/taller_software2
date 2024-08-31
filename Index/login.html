@@ -11,6 +11,11 @@
     <div class="container">
         <h1>Registro</h1>
         <form id="registerForm" action="registrar.php" method="post">
+
+            <label onclick="window.location.href='loginRegistro.html'" style="cursor: pointer; font-size: 10px; color: green; margin: 10px;">
+                <i class="fas fa-arrow-left"></i> Volver
+            </label>
+
             <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             
@@ -23,10 +28,10 @@
             <label for="celular"><i class="fas fa-mobile-alt"></i> Celular:</label>
             <input type="text" id="celular" name="celular" required>
 
-            <label for="password">Contraseña:</label>
+            <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
              <input type="password" id="password" name="password">
 
-             <label for="confPassword">confimrar Contraseña:</label>
+             <label for="confPassword"><i class="fas fa-lock"></i> confimrar Contraseña:</label>
              <input type="password" id="confPassword" name="confPassword">
             
             <button type="submit" class="btn-register">Registrar <i class="fas fa-check"></i></button>
