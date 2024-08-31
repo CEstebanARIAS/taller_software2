@@ -4,37 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro y Login</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/Style_.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Registro</h1>
-        <form id="registerForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required>
-            
-            <label for="cedula">Cédula:</label>
-            <input type="text" id="cedula" name="cedula" required>
-            
-            <label for="celular">Celular:</label>
-            <input type="text" id="celular" name="celular" required>
-            
-            <button type="submit">Registrar</button>
-        </form>
-        
-        <h1>Login</h1>
-        <form id="loginForm">
-            <label for="loginCedula">Cédula:</label>
-            <input type="text" id="loginCedula" name="loginCedula" required>
-            
-            <label for="loginCelular">Celular:</label>
-            <input type="text" id="loginCelular" name="loginCelular" required>
-            
-            <button type="submit">Login</button>
-        </form>
+        <div class="login-register-container">
+            <h1>Registro y Login</h1>
+            <div class="tabs">
+                <button class="tab" id="login-tab">Login <i class="fas fa-lock"></i></button>
+                <button class="tab" id="register-tab">Registro <i class="fas fa-user-plus"></i></button>
+            </div>
+            <div class="tab-content">
+                <div class="login-form" id="login-form">
+                    <h1>Login</h1>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <label for="loginCedula">Cédula:</label>
+                            <input type="text" id="loginCedula" name="loginCedula" required>
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="input-group">
+                            <label for="loginCelular">Celular:</label>
+                            <input type="text" id="loginCelular" name="loginCelular" required>
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <button type="submit" class="btn-login">Login <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+                <div class="register-form" id="register-form">
+                    <h1>Registro</h1>
+                    <form id="registerForm">
+                        <div class="input-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="input-group">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="input-group">
+                            <label for="cedula">Cédula:</label>
+                            <input type="text" id="cedula" name="cedula" required>
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="input-group">
+                            <label for="celular">Celular:</label>
+                            <input type="text" id="celular" name="celular" required>
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <button type="submit" class="btn-register">Registrar <i class="fas fa-check"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

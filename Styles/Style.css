@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f7f7f7; /* Color de fondo neutro */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #fff; /* Color de fondo blanco */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -19,6 +19,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333; /* Color de título oscuro */
 }
 
 form {
@@ -28,18 +29,19 @@ form {
 
 label {
     margin-bottom: 5px;
+    color: #666; /* Color de etiqueta gris */
 }
 
 input {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Color de borde gris claro */
     border-radius: 4px;
 }
 
 button {
     padding: 10px;
-    background-color: #28a745;
+    background-color: #4CAF50; /* Color de botón verde llamativo */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -47,10 +49,11 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #3e8e41; /* Color de botón verde oscuro */
 }
 
 #result {
     margin-top: 20px;
     font-weight: bold;
+    color: #666; /* Color de resultado gris */
 }
