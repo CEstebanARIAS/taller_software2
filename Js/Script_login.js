@@ -1,4 +1,3 @@
-// Script_login.js
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -14,16 +13,27 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         alert('Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.');
         return; // Detener la ejecución del script
     }
-    
-    // Guardar los datos en localStorage
-    localStorage.setItem('nombre', nombre);
-    localStorage.setItem('apellidos', apellidos);
-    localStorage.setItem('cedula', cedula);
-    localStorage.setItem('celular', celular);
-    localStorage.setItem('contraseña', contraseña); 
-    localStorage.setItem('confirmarContraseña', contraseñaConf);
+
+    // Crear un objeto usuario
+    const usuario = {
+        nombre: nombre,
+        apellidos: apellidos,
+        cedula: cedula,
+        celular: celular,
+        contraseña: contraseña
+    };
+
+    // Obtener usuarios guardados en localStorage
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    // Agregar el nuevo usuario al array de usuarios
+    usuarios.push(usuario);
+
+    // Guardar el array actualizado en localStorage
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
     alert('Registro exitoso');
     
     // Redirigir al index principal
-    window.location.href = 'index.html'; // Ruta correcta para redirigir al index principal
+    window.location.href = 'registrar.html';
 });

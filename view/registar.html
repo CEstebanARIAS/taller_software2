@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+    <link rel="stylesheet" href="../Styles/Style_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Iniciar Sesion</h1>
+        <form id="loginForm">
+
+            <label for="cedula"><i class="fas fa-id-card"></i> Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+            
+
+            <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
+            
+             <input type="password" id="password" name="password">
+
+             <button type="submit" class="btn-register">Ingresar <i class="fas fa-check"></i></button>
+             <label onclick="window.location.href='login.html'" style="cursor: pointer; color: blue; text-decoration: underline; font-size: 15px; display: flex; justify-content: center; margin-top: 1rem;">
+                 Registrar
+            </label>
+            
+            
+        </form>
+    </div>
+    <script src="../Js/ingresar.js"></script>
+</body>
+</html>
