@@ -1,40 +1,26 @@
 <?php
-// Datos de conexión
-$servername = "127.0.0.1";
-$port = "3307"; // Puerto específico
-$username = "root";
-$password = "";
-$dbname = "usuarios";
+include 'db.php';
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $cedula = $_POST['cedula'];
+    $contraseña = $_POST['password'];
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-} else {
-    echo "Conexión exitosa a la base de datos.<br>";
-}
+    $sql = "SELECT * FROM usuarios WHERE cedula='$cedula'";
+    $result = $conn->query($sql);
 
-// Obtener datos del formulario
-$cedula = $_POST['cedula'];
-$password = $_POST['password'];
-
-// Verificar usuario
-$sql = "SELECT * FROM usuarios WHERE cedula='$cedula'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    if (password_verify($password, $row['password'])) {
-        echo "Inicio de sesión exitoso";
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($contraseña, $row['contraseña'])) {
+            echo "Bienvenido";
+            // Redirigir al index principal
+            header("Location: index.html");
+        } else {
+            echo "Contraseña incorrecta";
+        }
     } else {
-        echo "Contraseña incorrecta";
+        echo "Usuario no registrado";
     }
-} else {
-    echo "No existe una cuenta con esa cédula";
-}
 
-// Cerrar conexión
-$conn->close();
+    $conn->close();
+}
 ?>
