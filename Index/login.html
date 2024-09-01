@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Ingreso</title>
     <link rel="stylesheet" href="../Styles/Style_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -12,29 +12,18 @@
         <h1>Registro</h1>
         <form id="registerForm" action="registrar.php" method="post">
 
-            <label onclick="window.location.href='loginRegistro.html'" style="cursor: pointer; font-size: 10px; color: green; margin: 10px;">
-                <i class="fas fa-arrow-left"></i> Volver
-            </label>
-
-            <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
-            <label for="apellidos"><i class="fas fa-user"></i> Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required>
-            
             <label for="cedula"><i class="fas fa-id-card"></i> Cédula:</label>
             <input type="text" id="cedula" name="cedula" required>
             
-            <label for="celular"><i class="fas fa-mobile-alt"></i> Celular:</label>
-            <input type="text" id="celular" name="celular" required>
 
-            <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
+            <label for="password">Contraseña:</label>
              <input type="password" id="password" name="password">
 
-             <label for="confPassword"><i class="fas fa-lock"></i> confimrar Contraseña:</label>
-             <input type="password" id="confPassword" name="confPassword">
+             <label onclick="window.location.href='index.html'" style="cursor: pointer; color: blue; text-decoration: underline;">
+                Ir al Registro
+            </label>
             
-            <button type="submit" class="btn-register">Registrar <i class="fas fa-check"></i></button>
+            <button type="submit" class="btn-register">Ingresar <i class="fas fa-check"></i></button>
         </form>
     </div>
     <script src="../JavaScript/Script_login.js"></script>

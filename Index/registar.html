@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="Styles/Style.css">
+    <link rel="stylesheet" href="../Styles/Style_login.css">
 </head>
 <body>
-    <h2>Registro de Usuario</h2>
-    <form id="registerForm" action="register.php" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <form id="registerForm" action="register.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos" required><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required><br>
 
-        <label for="cedula">Cédula:</label>
-        <input type="text" id="cedula" name="cedula" required><br>
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required><br>
 
-        <label for="celular">Celular:</label>
-        <input type="text" id="celular" name="celular" required><br>
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" required><br>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br>
 
-        <label for="confPassword">Confirmar Contraseña:</label>
-        <input type="password" id="confPassword" name="confPassword" required><br>
+            <label for="confPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confPassword" name="confPassword" required><br>
 
-        <button type="submit">Registrar</button>
-    </form>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
 
     <script>
         document.getElementById('registerForm').addEventListener('submit', function(event) {
