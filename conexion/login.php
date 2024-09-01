@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $cedula = $_POST['cedula'];
     $contraseña = $_POST['password'];
 
@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Bienvenido";
             // Redirigir al index principal
             header("Location: index.html");
+            exit(); // Asegúrate de detener la ejecución del script después de redirigir
         } else {
             echo "Contraseña incorrecta";
         }
@@ -22,5 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn->close();
+} else {
+    echo "Método de solicitud no válido.";
 }
 ?>

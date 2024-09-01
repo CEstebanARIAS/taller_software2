@@ -12,6 +12,4 @@ $conn = new mysqli($servername, $username, $password, $dbname, $port);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-
-echo "Conexión exitosa a la base de datos taller_software2 en el puerto 3307";
 ?>
