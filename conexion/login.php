@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cedula = $_POST['cedula'];
     $contraseña = $_POST['password'];
 
+    // Usar declaraciones preparadas para evitar inyecciones SQL
     $stmt = $conn->prepare("SELECT * FROM usuarios WHERE cedula = ?");
     $stmt->bind_param("s", $cedula);
     $stmt->execute();
@@ -30,8 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($contraseña, $row['contraseña'])) {
             echo "Bienvenido";
+            // Redirigir al index principal
             header("Location: index.html");
-            exit();
+            exit(); // Asegúrate de detener la ejecución del script después de redirigir
         } else {
             echo "Contraseña incorrecta";
         }
