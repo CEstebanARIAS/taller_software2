@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Declaración de Renta</title>
     <link rel="stylesheet" href="../Styles/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Calculadora de Declaración de Renta</h1>
-        <button onclick="window.location.href='login.html'">Ir al Registro</button>
+        <button class="btn-register" onclick="window.location.href='login.html'">
+            Ir al Registro <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </button>
         <form id="taxForm" action="declarar.php" method="POST">
-            <label for="patrimonio">Patrimonio Bruto:</label>
-            <input type="number" id="patrimonio" name="patrimonio" required>
-            
-            <label for="ingresos">Ingresos Totales:</label>
-            <input type="number" id="ingresos" name="ingresos" required>
-            
-            <label for="tarjeta">Consumos con Tarjeta de Crédito:</label>
-            <input type="number" id="tarjeta" name="tarjeta" required>
-            
-            <label for="compras">Compras y Consumos:</label>
-            <input type="number" id="compras" name="compras" required>
-            
-            <label for="consignaciones">Consignaciones Bancarias:</label>
-            <input type="number" id="consignaciones" name="consignaciones" required>
-            
-            <button type="submit">Calcular</button>
+            <label for="usuario_id">
+                <i class="fas fa-id-card" aria-hidden="true"></i> ID de Usuario:
+            </label>
+            <input type="number" id="usuario_id" name="usuario_id" placeholder="Ingrese su ID de usuario" required>
+
+            <label for="patrimonio">
+                <i class="fas fa-coins" aria-hidden="true"></i> Patrimonio Bruto:
+            </label>
+            <input type="number" id="patrimonio" name="patrimonio" placeholder="Ingrese el patrimonio bruto" required step="0.01">
+
+            <label for="ingresos">
+                <i class="fas fa-money-bill-wave" aria-hidden="true"></i> Ingresos Totales:
+            </label>
+            <input type="number" id="ingresos" name="ingresos" placeholder="Ingrese los ingresos totales" required step="0.01">
+
+            <label for="tarjeta">
+                <i class="fas fa-credit-card" aria-hidden="true"></i> Consumos con Tarjeta de Crédito:
+            </label>
+            <input type="number" id="tarjeta" name="tarjeta" placeholder="Ingrese los consumos con tarjeta" required step="0.01">
+
+            <label for="compras">
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i> Compras y Consumos:
+            </label>
+            <input type="number" id="compras" name="compras" placeholder="Ingrese compras y consumos" required step="0.01">
+
+            <label for="consignaciones">
+                <i class="fas fa-university" aria-hidden="true"></i> Consignaciones Bancarias:
+            </label>
+            <input type="number" id="consignaciones" name="consignaciones" placeholder="Ingrese consignaciones bancarias" required step="0.01">
+
+            <button type="submit" class="btn-calculate">
+                Calcular <i class="fas fa-calculator" aria-hidden="true"></i>
+            </button>
         </form>
         <div id="result"></div>
     </div>

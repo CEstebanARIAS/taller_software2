@@ -1,3 +1,4 @@
+// Script_login.js
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -8,11 +9,11 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const contraseña = document.getElementById('password').value; 
     const contraseñaConf = document.getElementById('confPassword').value;
 
-        // Validar si las contraseñas coinciden
-        if (contraseña !== contraseñaConf) {
-            alert('Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.');
-            return; // Detener la ejecución del script
-        }
+    // Validar si las contraseñas coinciden
+    if (contraseña !== contraseñaConf) {
+        alert('Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.');
+        return; // Detener la ejecución del script
+    }
     
     // Guardar los datos en localStorage
     localStorage.setItem('nombre', nombre);
@@ -23,6 +24,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     localStorage.setItem('confirmarContraseña', contraseñaConf);
     alert('Registro exitoso');
     
-    // Script_login.js
-window.location.href = 'index.html'; // Ruta correcta para redirigir al index principal
+    // Redirigir al index principal
+    window.location.href = 'index.html'; // Ruta correcta para redirigir al index principal
 });

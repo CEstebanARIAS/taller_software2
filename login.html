@@ -11,13 +11,19 @@
     <div class="container">
         <h1>Ingreso</h1>
         <form id="loginForm" action="login.php" method="POST">
-            <label for="cedula"><i class="fas fa-id-card"></i> Cédula:</label>
-            <input type="text" id="cedula" name="cedula" required><br>
+            <label for="cedula">
+                <i class="fas fa-id-card" aria-hidden="true"></i> Cédula:
+            </label>
+            <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cédula" required aria-label="Cédula">
 
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required><br>
+            <label for="password">
+                <i class="fas fa-lock" aria-hidden="true"></i> Contraseña:
+            </label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required aria-label="Contraseña">
 
-            <button type="submit" class="btn-register">Ingresar <i class="fas fa-check"></i></button>
+            <button type="submit" class="btn-register" aria-label="Ingresar">
+                Ingresar <i class="fas fa-check" aria-hidden="true"></i>
+            </button>
         </form>
     </div>
 </body>

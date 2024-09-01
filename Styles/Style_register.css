@@ -43,6 +43,12 @@ input {
     font-size: 16px;
 }
 
+input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
 button {
     padding: 10px;
     background-color: #28a745;
@@ -54,8 +60,14 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #218838;
+}
+
+small.form-text {
+    font-size: 12px;
+    color: #666;
 }

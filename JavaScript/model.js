@@ -1,13 +1,12 @@
-document.getElementById("taxForm").addEventListener("submit", function (event) {
+// model.js
+document.getElementById("taxForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
   const patrimonio = parseFloat(document.getElementById("patrimonio").value);
   const ingresos = parseFloat(document.getElementById("ingresos").value);
   const tarjeta = parseFloat(document.getElementById("tarjeta").value);
   const compras = parseFloat(document.getElementById("compras").value);
-  const consignaciones = parseFloat(
-    document.getElementById("consignaciones").value
-  );
+  const consignaciones = parseFloat(document.getElementById("consignaciones").value);
 
   const topePatrimonio = 190854000;
   const topeIngresos = 59377000;

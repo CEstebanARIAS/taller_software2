@@ -1,13 +1,18 @@
-# Ignorar el archivo .env
+# Ignorar el archivo de configuración de entorno
 .env
 
-# Ignorar la carpeta node_modules
+# Ignorar la carpeta de dependencias
 node_modules/
+vendor/
+
+# Ignorar archivos de lock que contienen dependencias
+package-lock.json
+composer.lock
 
 # Ignorar archivos de log
 *.log
 
-# Ignorar archivos de configuración de IDE
+# Ignorar archivos de configuración de IDE y editores
 .vscode/
 .idea/
 
@@ -16,6 +21,5 @@ desktop.ini
 .DS_Store
 
 # Ignorar archivos de compilación y dependencias
-/vendor/
-composer.lock
-package-lock.json
+build/
+dist/
