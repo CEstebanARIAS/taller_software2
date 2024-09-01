@@ -11,4 +11,11 @@ node_modules/
 .vscode/
 .idea/
 
+# Ignorar archivos específicos del sistema operativo
 desktop.ini
+.DS_Store
+
+# Ignorar archivos de compilación y dependencias
+/vendor/
+composer.lock
+package-lock.json

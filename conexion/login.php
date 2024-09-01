@@ -1,12 +1,15 @@
 <?php
 include 'db.php';
 
-if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cedula = $_POST['cedula'];
     $contraseña = $_POST['password'];
 
-    $sql = "SELECT * FROM usuarios WHERE cedula='$cedula'";
-    $result = $conn->query($sql);
+    // Usar declaraciones preparadas para evitar inyecciones SQL
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE cedula = ?");
+    $stmt->bind_param("s", $cedula);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -22,6 +25,7 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Usuario no registrado";
     }
 
+    $stmt->close();
     $conn->close();
 } else {
     echo "Método de solicitud no válido.";
