@@ -2,7 +2,7 @@
 include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario_id = $_POST['usuario_id']; // Debes obtener el ID del usuario logueado
+    $usuario_id = $_POST['usuario_id'];
     $patrimonio = $_POST['patrimonio'];
     $ingresos = $_POST['ingresos'];
     $tarjeta = $_POST['tarjeta'];
@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $debe_declarar = ($patrimonio >= 190854000 || $ingresos >= 59377000 || $tarjeta >= 59377000 || $compras >= 59377000 || $consignaciones >= 59377000) ? 1 : 0;
 
-    // Usar declaraciones preparadas para evitar inyecciones SQL
     $stmt = $conn->prepare("INSERT INTO declaraciones (usuario_id, patrimonio, ingresos, tarjeta, compras, consignaciones, debe_declarar) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("iiiiiii", $usuario_id, $patrimonio, $ingresos, $tarjeta, $compras, $consignaciones, $debe_declarar);
 
