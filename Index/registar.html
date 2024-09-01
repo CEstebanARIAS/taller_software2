@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso</title>
-    <link rel="stylesheet" href="../Styles/Style_login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="Styles/Style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Registro</h1>
-        <form id="registerForm" action="registrar.php" method="post">
+    <h2>Registro de Usuario</h2>
+    <form id="registerForm" action="register.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
 
-            <label for="cedula"><i class="fas fa-id-card"></i> Cédula:</label>
-            <input type="text" id="cedula" name="cedula" required>
-            
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required><br>
 
-            <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
-             <input type="password" id="password" name="password">
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required><br>
 
-             <label onclick="window.location.href='login.html'" style="cursor: pointer; color: blue; text-decoration: underline; font-size: 15px; justify-content: center;">
-                 Registrar
-            </label>
-            
-            <button type="submit" class="btn-register">Ingresar <i class="fas fa-check"></i></button>
-        </form>
-    </div>
-    <script src="../JavaScript/Script_login.js"></script>
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" required><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="confPassword">Confirmar Contraseña:</label>
+        <input type="password" id="confPassword" name="confPassword" required><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confPassword = document.getElementById('confPassword').value;
+
+            if (password !== confPassword) {
+                alert('Las contraseñas no coinciden. Por favor, verifica e intenta nuevamente.');
+                event.preventDefault(); // Detener la ejecución del script
+            }
+        });
+    </script>
 </body>
 </html>
