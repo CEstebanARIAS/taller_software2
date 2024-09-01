@@ -8,7 +8,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "taller_software2";
-$port = 3307; // Especifica el puerto
+$port = 3307;
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
@@ -17,4 +17,5 @@ $conn = new mysqli($servername, $username, $password, $dbname, $port);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
+echo "Conexión exitosa";
 ?>

@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
     $cedula = $_POST['cedula'];
@@ -9,22 +9,26 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $contraseña = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     // Verificar si el usuario ya existe
-    $check_sql = "SELECT * FROM usuarios WHERE cedula='$cedula'";
-    $check_result = $conn->query($check_sql);
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE cedula = ?");
+    $stmt->bind_param("s", $cedula);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if ($check_result->num_rows > 0) {
+    if ($result->num_rows > 0) {
         echo "El usuario con esta cédula ya está registrado.";
     } else {
         // Insertar nuevo usuario
-        $sql = "INSERT INTO usuarios (nombre, apellidos, cedula, celular, contraseña) VALUES ('$nombre', '$apellidos', '$cedula', '$celular', '$contraseña')";
+        $stmt = $conn->prepare("INSERT INTO usuarios (nombre, apellidos, cedula, celular, contraseña) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $nombre, $apellidos, $cedula, $celular, $contraseña);
 
-        if ($conn->query($sql) === TRUE) {
+        if ($stmt->execute()) {
             echo "Registro exitoso";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $stmt->error;
         }
     }
 
+    $stmt->close();
     $conn->close();
 } else {
     echo "Método de solicitud no válido.";
