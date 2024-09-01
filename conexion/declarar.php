@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_id = $_POST['usuario_id']; // Debes obtener el ID del usuario logueado
     $patrimonio = $_POST['patrimonio'];
     $ingresos = $_POST['ingresos'];
@@ -20,5 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn->close();
+} else {
+    echo "Método de solicitud no válido.";
 }
 ?>
