@@ -31,5 +31,7 @@ document.getElementById("taxForm").addEventListener("submit", function(event) {
     resultDiv.textContent = "Debes declarar renta.";
   } else {
     resultDiv.textContent = "No debes declarar renta.";
+    print("no debes declarar renta")
   }
+ 
 });
