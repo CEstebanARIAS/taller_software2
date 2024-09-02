@@ -17,26 +17,18 @@
         align-items: center; 
         padding: 8px 12px; 
         font-size: 14px; 
-        background-color: #048d22; /* Ajusta el color de fondo del botón si es necesario */
-        border: none; /* Opcional: para quitar el borde del botón */
+        background-color: #048d22; 
+        border: none; 
         color: bisque; 
         cursor: pointer; 
-        border-radius: 4px; /* Opcional: para bordes redondeados */
-    ">
-        <i class="fas fa-arrow-left" aria-hidden="true" style="color: white; margin-right: 8px;"></i>
-        Volver
+        border-radius: 4px;">
+            <i class="fas fa-arrow-left" aria-hidden="true" style="color: white; margin-right: 8px;"></i>
+            Volver
+        </button>
 
-        <p>        </p>
-    </button>
-    
-        
-
-        <form >
-
-            
-
+        <form id="taxForm">
             <label for="patrimonio">
-                <p>        </p>
+                <P ></P>
                 <i class="fas fa-coins" aria-hidden="true"></i> Patrimonio Bruto:
             </label>
             <input type="number" id="patrimonio" name="patrimonio" placeholder="Ingrese el patrimonio bruto" required step="0.01">
@@ -67,6 +59,6 @@
         </form>
         <div id="result"></div>
     </div>
-    <script src="../JavaScript/model.js"></script>
+    <script src="../Js/model.js"></script>
 </body>
 </html>
