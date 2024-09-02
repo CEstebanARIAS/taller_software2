@@ -48,5 +48,5 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     alert('Registro exitoso');
     
     // Redirigir al index principal
-    window.location.href = 'registrar.html';
+    window.location.href = 'registar.html';
 });
